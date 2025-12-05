@@ -146,6 +146,15 @@ body{
   color:var(--muted);
 }
 
+/* CLOSE BUTTON */
+.close-btn {
+  display:none;
+  font-size:32px;
+  cursor:pointer;
+  padding:8px 12px;
+  color:#fff;
+}
+
 /* MOBILE DROPDOWN MENU */
 .mobile-menu {
   display:none;
@@ -153,26 +162,29 @@ body{
   background:rgba(0,0,0,0.4);
   backdrop-filter:blur(8px);
   padding:18px;
-  gap:16px;
+  gap:18px;
   border-bottom:1px solid rgba(255,255,255,0.08);
 }
 
 .mobile-menu a {
   color:#fff;
   font-size:18px;
-  text-decoration:none;
-  padding-bottom:6px;
+  padding-bottom:8px;
   border-bottom:1px solid rgba(255,255,255,0.1);
+  text-decoration:none;
 }
 
-/* SHOW MENU WHEN NAV IS ACTIVE */
+/* WHEN NAV IS ACTIVE (MENU OPEN) */
 .nav.active .mobile-menu {
   display:flex;
 }
 
-/* MOBILE ONLY */
-@media (max-width:850px) {
+/* MOBILE RESPONSIVE BEHAVIOR */
+@media (max-width:850px){
   .desktop-menu { display:none; }
   .menu-btn { display:block; }
+  .nav.active .menu-btn { display:none; }
+  .nav.active .close-btn { display:block; }
 }
+
 
