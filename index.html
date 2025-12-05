@@ -230,9 +230,12 @@
 <script>
 const nav = document.querySelector(".nav");
 const menuBtn = document.querySelector(".menu-btn");
+const closeBtn = document.querySelector(".close-btn");
 
 menuBtn.onclick = () => nav.classList.add("active");
+closeBtn.onclick = () => nav.classList.remove("active");
 </script>
+
 
 </body>
 </html>
